@@ -73,7 +73,7 @@ const[count,setCount]= useState(0)
   return (
     <div className='widget-counter container'>
       <h2>Counter</h2>
-      <div style={style}>Number 0 is even</div> {/* STEP 3 */}
+      {count%2===0?<div style={style}>Number {count} is even</div>:<div style={style}>Number {count} is odd</div> } {/* STEP 3 */}
       <div>
         <button onClick={increment}>Increment</button>
         <button onClick={decrement}>Decrement</button>
